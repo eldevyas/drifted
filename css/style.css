@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Montserrat, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    height: 100vh; 
+}
+
+.video-container {
+    height: 300px;
+    width: 300px;
+    position: relative;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  z-index: 0;
+}
+
+
+
+.header {
+    justify-content: space-between;
+    display: flex;
+    margin: 30px 50px;
+    background-color: #231F20
+}
+
+.header img{
+    position: relative;
+    float: left;
+    height: auto;
+    width: 130px;
+}
+
+.header i {
+    position: relative;
+    float: right;
+    width: 130px;
+    height: auto;
+    color: white;
+}
