@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700&family=Poppins:wght@100;300;400;500;600;700&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+}
+
+
+.showcase {
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #262626;
+    color: white;
+    z-index: 2;
+}
+
+
+header img{
+    width: 130px;
+    height: auto;
+    cursor: pointer;
+    transition: all 0.4s ease-out;
+}
+
+header img:hover{
+    transform: scale(1.1);
+    transition: all 0.4s ease-in;
+}
+
+
+.showcase header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 55px;
+    z-index: 14;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fa-bars {
+    position: relative;
+    cursor: pointer;
+    transform: scale(1.5);
+    transition: all 0.4s ease-out;
+}
+
+
+.fa-bars:hover{
+    color:rgb(241, 90, 36);
+    transition: all 0.4s ease;
+}
+
+
+.showcase video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+}
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.text {
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    background-color: rgba(33, 118, 174, 0.25);
+    backdrop-filter: blur(20px);
+    padding-top: 500px;
+    margin-top: -500px;
+    padding-left: 50px;
+    padding-bottom: 50px;
+    padding-right: 50px;
+    border-radius: 0 0 20px 0 ;
+    box-shadow: 0 10px 50px rgba(33, 118, 174, 0.25);
+    animation: blur 5s infinite;
+}
+
+@keyframes blur{
+    0%{backdrop-filter: blur(10px);}
+    50%{backdrop-filter: blur(5px);}
+    100%{backdrop-filter: blur(10px);}
+}
+
+
+.text h2 {
+    font-size: 3em;
+    font-weight: 800;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+.text p {
+    font-size: 1.1em;
+    font-weight: 100;
+    line-height: 1.1em;
+    text-transform: none;
+    margin: 20px 0;
+    max-width: 500px;
+}
+
+
+.text a {
+    display: inline-block;
+    font-size: 25px;
+    font-weight: bold;
+    font-size: 1em;
+    background: #262626;
+    color: #E2E8CE;
+    border-radius: 50px;
+    border: 1px solid #E2E8CE;
+    padding: 5px 20px;
+    text-decoration: none;
+    transition: all 0.4s ease-out;
+    text-transform: uppercase;
+    box-shadow: 0 10px 80px rgba(0, 0, 0, 0.65);
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.text a:hover {
+    background-color:#F15A24;
+    box-shadow: 0 10px 80px rgba(241, 90, 36, 0.65);
+    padding: 5px 30px;
+    margin-left: -10px;
+    transition: all 0.4s ease;
+}
+
+.social {
+    position: absolute;
+    bottom: 20px;
+    z-index: 14;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    left: 50px;
+}
+
+.social li {
+    list-style: none;
+}
+
+.social li a{
+    padding: 10px 10px;
+    padding-top: 50px;
+    margin-right: 20px;
+    display: inline-block;
+    color: #E2E8CE;
+    transition: all 0.3s ease-out;
+    transform: scale(1.5);
+}
+
+
+.social li a:hover {
+    transform: translateY(-10px) scale(1.5);
+    transition: all 0.3s ease-in;
+}
+
+
+#facebook:hover{
+    color: #3b5998;
+}
+#instagram:hover{
+    color: #df1da5;
+}
+#youtube:hover{
+    color: #FF0000;
+}
+
+@media(max-width: 900px){
+    .showcase, .showcase header{
+        padding: 40px;
+    }
+
+    .text h2 {
+        font-size: 2.5em;
+    }
+
+    .text p {
+        font-size: 1.1em;
+    }
+
+    
+}
+
+
+hr{
+    width: 60%;
+    border: 3px solid rgb(241, 90, 36);
+    position: absolute;
+    z-index: 15;
+    right: 0;
+    top: 15%;
+    box-shadow: 0 10px 30px rgba(241, 90, 36, 0.7);
+    border-radius: 50px 0px 0px 50px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 15;
+    top: 0;
+    right: 0;
+    backdrop-filter: blur(10px);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding: 0;
+    padding-top: 10px;
+    z-index: 10000;
+    display: flex;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    justify-content: space-around;
+    background-color: rgba(0, 53, 88, 0.514);
+    border-radius: 0px 0 0 0px;
+    align-items: center;
+    box-shadow: -10px 0px 50px rgba(33, 118, 174, 0.25);
+  }
+  
+.sidenav a {
+    display: flex;
+    width: 100%;
+    position: relative;
+    text-decoration: none;
+    font-size: 20px;
+    color: #E2E8CE;
+    transition: 0.3s ease-out;
+    z-index: 16;
+    padding: 0px 50px;
+    line-height: 50px;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent; 
+  }
+
+
+.sidenav a:hover {
+    color: #F15A24;
+    background-color: transparent;
+    border-bottom: 2px solid #F15A24; 
+    transition: 0.3s ease-out;
+
+
+  }
+
+.sidenav a:hover span i{
+    color: #F15A24;
+  }
+  
+.sidenav i {
+    color: #E2E8CE;
+    background: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin-top: 35px;
+    margin-left: 20px;
+    z-index: 10000;
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.4s ease-out;
+
+}
+
+.sidenav i:hover{
+      color:rgb(241, 90, 36);
+      transition: 0.4s;
+  }
+
+
+.sidenav span i{
+    font-size: 20px;
+    top: -20px;
+    left: -10px;
+    
+}
+  
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+#toggle {
+      transition: 0.3s;
+}
+
+
+
+#controls {
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    bottom:0;
+    margin-right: 40px;
+    margin-bottom: 25px;
+    z-index: 14;
+    padding: 10px 30px;
+}
+
+.bell {
+    color: #E2E8CE;
+    transform: scale(1.1);
+    transition: all 0.4s ease-out;
+    float: right;
+    position: relative;
+    top: 4px;
+}
+
+.bell:hover {
+    color: #F15A24;
+    transition: all 0.4s ease;
+}
+
+#control {
+    color: #E2E8CE;
+    transform: scale(1.2);
+    transition: all 0.4s ease-out;
+    float: right;
+}
+
+#control:hover {
+    color: #F15A24;
+    transition: all 0.4s ease;
+}
+
+
+input[type=range]{
+    -webkit-appearance: none;
+    border-radius: 50px;
+    background-color: #e2e8ce3f;
+    backdrop-filter: blur(5px);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 20px;
+    border-radius: 50px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 20px;
+    width: 20px;
+    
+    background: #F15A24;
+    border-radius: 0px;
+    box-shadow: -400px 0 0 400px #F15A24;
+}
+
+input[type=range]:focus {
+    border-radius: 50px;
+    outline: none;
+    border: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: transparent;
+    border-radius: 50px;
+}
+
+input[type=range]::-webkit-fill-lower {
+    background: transparent;
+    border-radius: 10px;
+}
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 30px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000;
+    background: #262626;
+    border-radius: 50px;
+    border: 0px solid #010101;
+  }
+
+
+@media (max-width: 700px){
+    #controls{
+        margin-right: 10px;
+    }
+
+    .social{
+        left: 10px;
+    }
+}
+
+
+
+
+progress[value] {
+    z-index: 15;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    height: 10px;
+    border-radius: 0px;
+    box-shadow: 0px -10px 10px rgba(241, 90, 36, 0.15);
+    overflow: hidden;
+  }
+  
+  progress[value]::-webkit-progress-bar {
+    background-color: transparent;
+    border-radius: 0px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25) inset;
+  }
+
+  progress[value]::-webkit-progress-value {
+    background-color:#F15A24;
+    border-radius: 0px;
+    position: relative;
+    transition: width 2s linear;
+  }
+
+  progress[value]::-moz-progress-bar {
+    background-color:#F15A24;
+    border-radius: 0px;
+    position: relative;
+  }

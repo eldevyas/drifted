@@ -3,34 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="images/icon.png" type="image/png" style="transform: scale(5);">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DRIFTED - Landing Page</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script src="https://coolors.co/palette-widget/widget.js"></script>
     <script data-id="031871053017085127">new CoolorsPaletteWidget("031871053017085127", ["d0ccd0","fbfcff","231f20","2176ae","f15a24"]); </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
-<body>
-    <section class="showcase">
-        <header>
-            <h1>DRIFTED</h1>
-            <div class="toggle"></div>
-        </header>
+    <header>
 
-        <video src="images/drift.mp4" muted loop autoplay></video>
+    <section class="showcase" id="showcase">
+        <video id="video" src="images/Aventador2K.mp4" loop autoplay muted="false"></video>
+        <header>
+            <img src="images/DRIFTED.png">
+            <i class="fas fa-bars" class="toggle" id="toggle" onclick="openNav()"></i>
+        </header>
 
         <div class="overlay"></div>
 
         <div class="text">
-            <h2>The Ultimate Car Content Website</h2>
+            <h2>DRIVE IT LIKE YOU STOLE IT</h2>
             <p>
-                Get started to access various photos, videos, articles and even drift tutorials on DRIFTED.
-                <br>
+                Get started to access various photos, videos, articles and even drift tutorials on <span><img src="images/DRIFTED.png" height= "auto" width="80px"></span>.
+            </p>
+            <p>
                 We make it easier for you to find the content you're looking for as a car enthusiast. We bring it from anywhere into you!
-                <br>
+            </p>
+            <p>
                 Please support us by subscribing to our Instagram, Youtube and Facebook pages, we post daily content just like as our website.
-                <br>
+            </p>
+            <p>
                 Thank you by advance!
             </p>
 
@@ -38,23 +44,59 @@
         </div>
 
         <ul class="social">
-            <li><i class="fa-facebook"></i></li>
-            <li><i class="fa-instagram"></i></li>
-            <li><i class="fa-youtube"></i></li>
+            <li><a href= "#" id="facebook"><i class="fab fa-facebook"></i></a></li>
+            <li><a href= "#" id="instagram"><i class="fab fa-instagram"></i></a></li>
+            <li><a href= "#" id="youtube"><i class="fab fa-youtube"></i></a></li>
         </ul>
+
+        <hr>
+
+        <div id="controls">
+            
+    
+            <i class="fa fa-pause" id="control" onclick="playPause()" style="cursor: pointer";></i>
+    
+            <input id="slide" type="range" min="-0" max="1" value="1" step="0.0001" onclick ="unmute()" onchange="console.log(this.value)">
+
+            <output></output>
+    
+            <a class="bell" href="#" onclick="sound()"><i class="fas fa-volume-off" id="btn"></i></a>
+        </div>
+
+        <progress id="progress" max="100" value="0"></progress>
+    
     </section>
 
-    <div class="menu">
+    <div id="mySidenav" class="sidenav">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Videos</a></li>
-            <li><a href="#">Photos</a></li>
-            <li><a href="#">4K Wallpapers</a></li>
-            <li><a href="#">Articles</a></li>
-            <li><a href="#">News</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Contact us</a></li>
+            <i class="fa fa-close" onclick="closeNav()"></i>
+            <li><a href="#"><span><i class="fas fa-home"></i></span>Home</a></li>
+            <li><a href="#"><span><i class="fas fa-video"></i></span>Videos</a></li>
+            <li><a href="#"><span><i class="fas fa-images"></i></span>Photos</a></li>
+            <li><a href="#"><span><i class="fas fa-image"></i></span>Wallpapers</a></li>
+            <li><a href="#"><span><i class="fas fa-book"></i></span>Articles</a></li>
+            <li><a href="#"><span><i class="fas fa-newspaper"></i></span>News</a></li>
+            <li><a href="#"><span><i class="fas fa-info-circle"></i></span>About us</a></li>
+            <li><a href="#"><span><i class="fas fa-envelope"></i></span>Contact us</a></li>
         </ul>
     </div>
-</body>
+
+    </header>
+    
+    <body>
+        <section class="lamborghini">
+            <h3 align="center">Lamborghini Aventador SVG - Sponsored on DRIFTED.COM</h3>
+        </section>
+    </body>
+
+
+
+
+
+
+
+
+    <script src="header.js"></script>
+
+
 </html>
